@@ -19,10 +19,10 @@ import org.slf4j.MDC;
 import com.google.gson.Gson;
 
 //El cliente debe poder conectarse al servidor de directorios para pedir un archivo
-//El cliente debe poder crear un archivo de 10kb como máximo
-//El cliente debe poder elegir un archivo y modificarlo
-//El cliente debe poder ver el contenido de un archivo
-//El cliente debe poder eliminar un archivo
+//El cliente debe tener la opción de crear un archivo de 10kb como máximo
+//El cliente debe tener la opción de elegir un archivo y modificarlo
+//El cliente debe tener la opción de ver el contenido de un archivo
+//El cliente debe tener la opción de eliminar un archivo
 
 
 public class Cliente {
