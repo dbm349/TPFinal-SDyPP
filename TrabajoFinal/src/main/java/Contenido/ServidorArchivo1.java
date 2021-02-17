@@ -9,6 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
+//El servidor de archivos debe poder modificar un archivo, verificando el tamaño del mismo
+//El servidor de archivos debe poder borrar un archivo
+//El servidor de archivos debe poder crear un archivo, verificando el tamaño del mismo
+//El servidor de archivos debe poder llamar al servidor de archivos secundario si se encuentra con muchas peticiones 
+//(El servidor de archivos debe realizar una copia del mismo al terminar de realizar alguna de las operaciones anteriores??)
+
+
 public class ServidorArchivo1 implements Runnable{
 	
 	private final static Logger log = LoggerFactory.getLogger(ServidorArchivo1.class);
