@@ -1,3 +1,1 @@
-# Trabajo Final
-
-# Sistema Distribuido de Archivos
+# Trabajo Final: Sistema Distribuido de Archivos
