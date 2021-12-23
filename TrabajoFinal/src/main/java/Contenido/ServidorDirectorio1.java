@@ -33,9 +33,9 @@ public class ServidorDirectorio1 implements Runnable {
 			while (true) {
 				Socket cliente = ss.accept();
 				System.out.println("Cliente conectado: "+cliente.getInetAddress().getCanonicalHostName()+" : "+cliente.getPort());
-				HiloServidor hs = new HiloServidor(cliente,colaDeMensajes);
-				Thread HSthread = new Thread(hs);
-				HSthread.start();
+				ThreadServidorDirectorio1 hs = new ThreadServidorDirectorio1(cliente,colaDeMensajes);
+				Thread servidorThreadD = new Thread(hs);
+				servidorThreadD.start();
 			}
 		} catch (IOException e) {
 			System.out.println("Puerto en uso");
