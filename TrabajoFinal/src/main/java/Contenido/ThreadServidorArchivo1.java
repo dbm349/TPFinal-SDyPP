@@ -21,7 +21,7 @@ public class ThreadServidorArchivo1 implements Runnable {
 	Socket cliente;
 	private ArrayList<String> colaDeMensajes;
 	
-	public HiloServidor(Socket cliente,ArrayList<String> colaDeMensajes) {
+	public ThreadServidorArchivo1(Socket cliente,ArrayList<String> colaDeMensajes) {
 		this.cliente=cliente;
 		this.colaDeMensajes=colaDeMensajes;
 	}
