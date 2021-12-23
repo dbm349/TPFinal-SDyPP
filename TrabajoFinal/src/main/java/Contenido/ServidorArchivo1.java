@@ -36,8 +36,8 @@ public class ServidorArchivo1 implements Runnable {
 			while (true) {
 				Socket cliente = ss.accept();
 				System.out.println("Cliente conectado: "+cliente.getInetAddress().getCanonicalHostName()+" : "+cliente.getPort());
-				HiloServidor hs = new HiloServidor(cliente,colaDeMensajes);
-				Thread HSthread = new Thread(hs);
+				ThreadServidorArchivo1 hs = new ThreadServidorArchivo1(cliente,colaDeMensajes);
+				Thread servidorThreadA = new Thread(hs);
 				HSthread.start();
 			}
 		} catch (IOException e) {
