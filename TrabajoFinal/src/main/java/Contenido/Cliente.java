@@ -158,7 +158,8 @@ public class Cliente {
 				System.out.println("1. Leer archivo             ");
 				System.out.println("2. Editar archivo     ");
 				System.out.println("3. Preguntar por la existencia de archivo");
-				System.out.println("4. Salir                        ");
+				System.out.println("4. Crear archivo");
+				System.out.println("5. Salir                        ");
 				System.out.println("------------------------------------");
 				System.out.println("Opcion======>");
 				try {
@@ -176,9 +177,13 @@ public class Cliente {
 					case 3:
 						
 						break;
-						
+							
 					case 4:
-						salida.println("4");
+						
+						break;
+						
+					case 5:
+						salida.println("5");
 						break;
 					default:
 						System.out.println("Opcion Invalida!");
