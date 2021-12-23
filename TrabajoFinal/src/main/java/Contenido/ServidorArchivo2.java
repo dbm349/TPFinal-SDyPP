@@ -46,7 +46,7 @@ public class ServidorArchivo2 implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		//Para el ejemplo utilizo puerto 6000
+		//Para el ejemplo utilizo puerto 6001
 		ServidorArchivo2 servidor = new ServidorArchivo2(6001);
 	}
 
