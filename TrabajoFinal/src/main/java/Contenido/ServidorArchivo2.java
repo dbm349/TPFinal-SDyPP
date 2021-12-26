@@ -32,11 +32,11 @@ public class ServidorArchivo2 implements Runnable {
 		try {
 			ServerSocket ss = new ServerSocket(port);
 			//Servidor Escuchando puerto ingresado
-			System.out.println("---Servidor iniciado, escuchando en puerto "+port+"---");
+			System.out.println("---Servidor de directorio 2 iniciado, escuchando en puerto "+port+"---");
 			while (true) {
-				Socket cliente = ss.accept();
-				System.out.println("Cliente conectado: "+cliente.getInetAddress().getCanonicalHostName()+" : "+cliente.getPort());
-				HiloServidor hs = new HiloServidor(cliente,colaDeMensajes);
+				Socket ServidorDirectorio2 = ss.accept();
+				System.out.println("Servidor de directorio 2 conectado: "+ServidorDirectorio2.getInetAddress().getCanonicalHostName()+" : "+ServidorDirectorio2.getPort());
+				HiloServidor hs = new HiloServidor(ServidorDirectorio2,colaDeMensajes);
 				Thread HSthread = new Thread(hs);
 				HSthread.start();
 			}

@@ -17,21 +17,21 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
 
-public class ThreadServidorArchivo1 implements Runnable {
-	Socket ServidorDirectorio1;
+public class ThreadServidorArchivo2 implements Runnable {
+	Socket ServidorArchivo2;
 	private ArrayList<String> colaDeMensajes;
 	
-	public ThreadServidorArchivo1(Socket ServidorDirectorio1,ArrayList<String> colaDeMensajes) {
-		this.ServidorDirectorio1=Directorio1;
+	public ThreadServidorArchivo2(Socket ServidorArchivo2,ArrayList<String> colaDeMensajes) {
+		this.ServidorArchivo2=ServidorArchivo2;
 		this.colaDeMensajes=colaDeMensajes;
 	}
 	
 	public void run() {
 		try {
-			BufferedReader entrada = new BufferedReader (new InputStreamReader(ServidorDirectorio1.getInputStream()));
-			PrintStream salida = new PrintStream (this.ServidorDirectorio1.getOutputStream(),true);
+			BufferedReader entrada = new BufferedReader (new InputStreamReader(ServidorArchivo2.getInputStream()));
+			PrintStream salida = new PrintStream (this.ServidorArchivo2.getOutputStream(),true);
 			
-			while(!ServidorDirectorio1.isClosed()) {
+			while(!ServidorArchivo2.isClosed()) {
 				String opcion = entrada.readLine();
 					
 				if (opcion.substring(opcion.indexOf("|")+1, opcion.length()).equals("SEND")) {
@@ -60,7 +60,7 @@ public class ThreadServidorArchivo1 implements Runnable {
 					System.out.println("Fin de mensajes");
 				}
 			}
-			this.ServidorDirectorio1.close();
+			this.ServidorArchivo2.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
