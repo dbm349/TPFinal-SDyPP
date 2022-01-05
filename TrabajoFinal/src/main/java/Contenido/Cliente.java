@@ -129,14 +129,17 @@ public class Cliente {
 		Cliente cliente = new Cliente(c,clienteIP,puerto);
 		
 		int opc = 0;
-		while(opc!=3) {
+		while(opc!=5) {
 			try {
 				Scanner scan = new Scanner(System.in);
-				System.out.println();
-				System.out.println("Bandeja del Cliente ID: " + cliente.clienteID);
-				System.out.println("1- Enviar un mensaje a un cliente.");
-				System.out.println("2- Leer mensajes");
-				System.out.println("3- Salir.");
+				System.out.println("***********Menu Principal*********");
+				System.out.println("1. Leer archivo             ");
+				System.out.println("2. Editar archivo     ");
+				System.out.println("3. Preguntar por la existencia de archivo");
+				System.out.println("4. Crear archivo");
+				System.out.println("5. Salir                        ");
+				System.out.println("------------------------------------");
+				System.out.println("Opcion======>");
 				System.out.println();
 				opc = scan.nextInt();
 			}catch (InputMismatchException ex) {
@@ -146,8 +149,12 @@ public class Cliente {
 				cliente.EnviarMensaje(cliente);
 			}else if (opc==2){
 				cliente.LeerMensaje(cliente);
-			}else if (opc==3) {
-				System.out.println("Adios");
+			}else if (opc==3{
+				cliente.LeerMensaje(cliente);
+			}else if (opc==4){
+				cliente.LeerMensaje(cliente);
+			}else if (opc==5) {
+				System.out.println("Fin de la operación");
 			}else {
 				System.out.println("Ingrese una opcion valida");
 			}
