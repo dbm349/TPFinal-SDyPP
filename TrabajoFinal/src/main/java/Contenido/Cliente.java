@@ -60,8 +60,8 @@ public class Cliente {
 		int destinoID = 0;
 		while(!IDValidate) {
 			Scanner scan = new Scanner(System.in);
-			System.out.println("Ingresar ID de destino");
-			ID = scan.nextLine();
+			//debemos recuperar el ID del servidor de directorio 1, si es que está activo 
+			//ID = scan.nextLine();
 			try {
 				destinoID = Integer.parseInt(ID);
 				IDValidate = true;
@@ -146,13 +146,13 @@ public class Cliente {
 				System.out.println("Error!");
 			}
 			if (opc==1) {
-				cliente.EnviarMensaje(cliente);
+				cliente.LeerArchivo(cliente);
 			}else if (opc==2){
-				cliente.LeerMensaje(cliente);
+				cliente.EditarArchivo(cliente);
 			}else if (opc==3{
-				cliente.LeerMensaje(cliente);
+				cliente.PreguntarPorArchivo(cliente);
 			}else if (opc==4){
-				cliente.LeerMensaje(cliente);
+				cliente.CrearArchivo(cliente);
 			}else if (opc==5) {
 				System.out.println("Fin de la operación");
 			}else {
