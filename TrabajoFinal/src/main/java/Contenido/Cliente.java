@@ -149,7 +149,7 @@ public class Cliente {
 				cliente.LeerArchivo(cliente);
 			}else if (opc==2){
 				cliente.EditarArchivo(cliente);
-			}else if (opc==3{
+			}else if (opc==3){
 				cliente.PreguntarPorArchivo(cliente);
 			}else if (opc==4){
 				cliente.CrearArchivo(cliente);
